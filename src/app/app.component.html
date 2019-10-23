@@ -1,0 +1,15 @@
+<div style="text-align:center">
+  <h1>
+    My App
+    
+  </h1>
+  <div>
+    <button (click)="decrement()">Subtract</button>
+    <!--This is how we pass the data from perent to child component-->
+    <app-child *ngIf="isVisible" [myNewNumber]= "counter" [myNumber2]="user"></app-child>
+    <button (click) = "increment()">Addition</button><br>
+    <a (click)="updateValue()">Update</a><br>
+    <!--when hide destroy method will be executed-->
+    <button (click) = "switchVisibility()">Show/hide</button><br>
+  </div>
+</div>
